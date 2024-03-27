@@ -7,8 +7,8 @@
     "start": "node ./src/app.ts",
     "dev": "nodemon ./src/app.ts",
     "migration:create": "typeorm migration:create ./src/migrations/migration_table",
-    "migration:run": "ts-node -T node_modules/typeorm/cli.js migration:run -d src/app.ts",
-    "migration:revert": "ts-node -T node_modules/typeorm/cli.js migration:revert -d src/app.ts"
+    "migration:run": "ts-node -T node_modules/typeorm/cli.js migration:run -d src/config/data.config.ts",
+    "migration:revert": "ts-node -T node_modules/typeorm/cli.js migration:revert -d src/config/data.config.ts"
   },
   "keywords": [],
   "author": "",

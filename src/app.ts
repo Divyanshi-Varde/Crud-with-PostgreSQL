@@ -1,26 +1,9 @@
 import express from "express";
-import dotenv from "dotenv";
+import { AppDataSource } from "./config/data.config";
 import { setupRoutes } from "./routes/crud.routes";
 import { setupAuthRoutes } from "./routes/auth.routes";
-import { DataSource } from "typeorm";
 import { User } from "./entities/users.entity";
-import "reflect-metadata";
 
-dotenv.config();
-
-export const AppDataSource = new DataSource({
-  type: "postgres",
-  host: "localhost",
-  port: Number(process.env.POSTGRES_PORT),
-  username: process.env.POSTGRES_USERNAME,
-  password: process.env.POSTGRES_PASSWORD,
-  database: process.env.POSTGRES_DATABASE,
-  entities: ["src/entities/*{.ts,.js}"],
-  // migrationsTableName: "",
-  // migrations: ["src/migrations/*{.ts,.js}"],
-  synchronize: true,
-  logging: true,
-});
 
 const PORT = process.env.PORT;
 

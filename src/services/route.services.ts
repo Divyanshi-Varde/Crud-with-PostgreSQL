@@ -1,5 +1,5 @@
 import { User } from "../entities/users.entity";
-import { AppDataSource } from "../app";
+import { AppDataSource } from "../config/data.config";
 import { SUCCESS_MESSAGES,ERROR_MESSAGES,SUCCESS_MESSAGES_STATUS,ERROR_MESSAGE_STATUS } from "../constants/constants";
 
 
